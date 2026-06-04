@@ -309,6 +309,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .btn-find:hover { background: #313132; }
 
+/* ─── Sticky filter bar ──────────────────────────────────────────────────────── */
+.sticky-filters {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-72px); /* hidden above viewport */
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity   0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  /* drop shadow to lift it off the page content */
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.10));
+}
+.sticky-filters.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.sticky-filters.is-receding {
+  transform: translateX(-50%) translateY(-72px);
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* ─── Sections Container ─────────────────────────────────────────────────────── */
 .sections-container {
   display: flex;

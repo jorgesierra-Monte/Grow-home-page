@@ -134,4 +134,30 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
   });
 
+
+  /* ── 7. Sticky filter bar ────────────────────────────────────────────────── */
+  const stickyBar   = document.getElementById('stickyFilters');
+  const originBar   = document.querySelector('.hero-lockup .hero-filter-bar');
+  let   stickyShown = false;
+
+  function getStickyTrigger() {
+    // Y position in the document where the filter bar's top edge hits 24px from viewport top
+    return originBar.getBoundingClientRect().top + window.scrollY - 24;
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollY   = window.scrollY;
+    const threshold = getStickyTrigger();
+
+    if (scrollY >= threshold && !stickyShown) {
+      stickyShown = true;
+      stickyBar.classList.remove('is-receding');
+      stickyBar.classList.add('is-visible');
+    } else if (scrollY < threshold && stickyShown) {
+      stickyShown = false;
+      stickyBar.classList.remove('is-visible');
+      stickyBar.classList.add('is-receding');
+    }
+  }, { passive: true });
+
 });

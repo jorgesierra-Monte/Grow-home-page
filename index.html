@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1600" />
   <title>Grow Therapy — Mental health made easy</title>
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <!-- GSAP for hero load animation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
@@ -82,6 +82,17 @@
       <button class="btn btn-primary">Menu</button>
     </div>
   </nav>
+
+  <!-- ── Sticky filter bar (portal — fixed outside hero DOM) ──────────── -->
+  <div class="sticky-filters" id="stickyFilters" aria-hidden="true">
+    <div class="hero-filter-bar">
+      <button class="filter-pill">Talk therapy<span class="filter-chevron"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+      <button class="filter-pill">New York<span class="filter-chevron"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+      <button class="filter-pill">Insurance*<span class="filter-chevron"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+      <button class="filter-pill">Needs<span class="filter-chevron"><svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+      <button class="btn-find">Find a provider</button>
+    </div>
+  </div>
 
   <!-- ── Main content ───────────────────────────────────────────────────── -->
   <div class="sections-container">
@@ -796,6 +807,6 @@
 
 </div><!-- /page-wrapper -->
 
-<script src="animations.js?v=3"></script>
+<script src="animations.js?v=4"></script>
 </body>
 </html>
