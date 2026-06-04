@@ -413,6 +413,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex: 0 0 280px;
   width: 280px;
 }
+/* thumbnail + meta wrapper */
+.provider-card > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
 .card-thumbnail {
   aspect-ratio: 312 / 416;
   border-radius: var(--radius-card);
