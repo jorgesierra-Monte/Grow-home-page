@@ -447,10 +447,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: flex-start;
   padding: 0 4px;
 }
-/* subhead/serif/small — Season VF, weight 570, 20/24px, tracking 0 */
+/* subhead/serif/small — Season VF Sans Regular, weight 570, 20/24px, tracking 0 */
+/* "serif" is Arc's naming convention, not a literal serif font variant */
 .card-name {
   flex: 1;
-  font-family: var(--font-vf-serif);
+  font-family: var(--font-vf);
   font-size: 20px;
   line-height: 24px;
   font-variation-settings: 'wght' 570;
@@ -684,11 +685,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 24px 0;
   gap: 16px;
 }
-/* subhead/sans/default */
+/* subhead/sans/small — 20px/24px, wght 550, tracking 0 */
 .faq-question-text {
   font-family: var(--font-vf);
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 20px;
+  line-height: 24px;
   font-variation-settings: 'wght' 550;
   letter-spacing: 0;
   color: var(--color-text-default);
