@@ -17,7 +17,8 @@
   --color-accent-winnie:      #E8F02C;
 
   /* Typography */
-  --font-vf: 'Season VF', sans-serif;
+  --font-vf:        'Season VF', sans-serif;
+  --font-vf-serif:  'Season VF', serif;
 
   /* Spacing */
   --sp-2:   4px;
@@ -443,6 +444,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .card-name {
   flex: 1;
+  font-family: var(--font-vf-serif);
   font-size: 20px;
   line-height: 24px;
   font-variation-settings: 'wght' 400;
