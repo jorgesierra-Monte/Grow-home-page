@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── 1. Hero image load animation (GSAP stagger) ────────────────────────── */
   const heroImages = document.querySelectorAll('.hero-image');
 
-  gsap.set(heroImages, { opacity: 0, scale: 0.96 });
-
-  gsap.to(heroImages, {
-    opacity: 1,
-    scale: 1,
-    duration: 0.75,
-    stagger: 0.08,
-    ease: 'power2.out',
+  // gsap.from() handles the initial hidden state — no gsap.set() needed,
+  // which avoids the CSS-transition conflict that was blocking some images.
+  gsap.from(heroImages, {
+    opacity: 0,
+    scale: 0.88,
+    y: 14,
+    duration: 0.9,
+    stagger: 0.14,          // longer gap → images pop in one by one
+    ease: 'back.out(1.4)',  // soft overshoot on scale — settles in naturally
+    clearProps: 'all',      // clean up inline styles so parallax takes over cleanly
     onComplete: enableCursorParallax,
   });
 
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       heroImages.forEach(img => {
         const depth = parseFloat(img.dataset.depth) || 0.5;
-        const maxPx = 20;
+        const maxPx = 10;
         const tx = currentX * maxPx * depth;
         const ty = currentY * maxPx * depth;
         img.style.transform = `translate(${tx}px, ${ty}px)`;

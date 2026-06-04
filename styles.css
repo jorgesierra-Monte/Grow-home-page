@@ -223,7 +223,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute;
   overflow: hidden;
   will-change: transform;
-  transition: transform 0.45s var(--ease-in);
+  /* No CSS transition here — GSAP owns transform during load, rAF lerp owns it after */
 }
 .hero-image img {
   width: 100%;
@@ -232,15 +232,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: block;
 }
 
-/* Positions from Figma (1600px canvas) */
-.hi-1 { width: 106px; height: 138px; left: 1075px; top: 30px; border-radius: 4px; }
-.hi-2 { width: 368px; height: 254px; left: 155px;  top: 278px; border-radius: 6px; }
-.hi-3 { width: 131px; height: 175px; left: 0;       top: 471px; border-radius: 4px; }
-.hi-4 { width: 501px; height: 543px; left: calc(50% - 250px); top: 107px; border-radius: 6px; }
-.hi-5 { width: 168px; height: 204px; right: 0;      top: 118px; border-radius: 4px; overflow: hidden; }
-.hi-6 { width: 263px; height: 379px; left: 1181px;  bottom: 389px; border-radius: 6px; }
-.hi-7 { width: 154px; height: 182px; right: -20px;  top: 438px; border-radius: 4px; }
-.hi-8 { width: 131px; height: 123px; left: 24px;    top: 131px; border-radius: 4px; }
+/* Positions from Figma (1600px canvas) — exact node coordinates */
+.hi-1 { width: 106px; height: 138px; left: 1075px;              top: 30px;  border-radius: 4px; }
+.hi-2 { width: 368px; height: 254px; left: 155px;               top: 278px; border-radius: 6px; }
+.hi-3 { width: 131px; height: 175px; left: 0;                   top: 471px; border-radius: 4px; }
+.hi-4 { width: 501px; height: 543px; left: calc(50% - 250px);   top: 107px; border-radius: 6px; }
+.hi-5 { width: 168px; height: 204px; left: 1468px;              top: 118px; border-radius: 4px; }
+.hi-6 { width: 263px; height: 379px; left: 1181px;              bottom: 389px; border-radius: 6px; }
+.hi-7 { width: 154px; height: 182px; left: calc(50% + 722px);   top: 438px; border-radius: 4px; }
+.hi-8 { width: 131px; height: 123px; left: 24px;                top: 131px; border-radius: 4px; }
 
 /* Hero text lockup */
 .hero-lockup {
