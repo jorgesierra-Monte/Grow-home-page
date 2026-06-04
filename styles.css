@@ -177,13 +177,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 8px;
   align-items: center;
 }
+/* label/small */
 .btn {
   height: 36px;
   padding: 0 16px;
   border-radius: var(--radius-pill);
   font-family: var(--font-vf);
   font-size: 14px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 550;
   letter-spacing: 0;
   transition: background var(--dur-fast) var(--ease-in),
               color var(--dur-fast) var(--ease-in);
@@ -255,11 +256,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 32px;
   width: max-content;
 }
+/* display/large */
 .hero-headline {
+  font-family: var(--font-vf);
   font-size: 88px;
   line-height: 88px;
   letter-spacing: -1px;
-  font-variation-settings: 'wght' 400;
+  font-variation-settings: 'wght' 490;
   text-align: center;
   color: var(--color-text-default);
   width: 1004px;
@@ -303,7 +306,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: var(--radius-pill);
   font-family: var(--font-vf);
   font-size: 14px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 550;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -362,10 +365,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   gap: 4px;
 }
+/* subhead/sans/default */
 .carousel-title h2 {
+  font-family: var(--font-vf);
   font-size: 24px;
   line-height: 29px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 550;
   letter-spacing: 0;
   color: var(--color-text-secondary);
 }
@@ -442,12 +447,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: flex-start;
   padding: 0 4px;
 }
+/* subhead/serif/small — Season VF, weight 570, 20/24px, tracking 0 */
 .card-name {
   flex: 1;
   font-family: var(--font-vf-serif);
   font-size: 20px;
   line-height: 24px;
-  font-variation-settings: 'wght' 400;
+  font-variation-settings: 'wght' 570;
   letter-spacing: 0;
   color: var(--color-text-secondary);
 }
@@ -463,8 +469,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 8px;
   white-space: nowrap;
 }
+/* label/default */
 .card-info-row span {
-  font-size: 14px;
+  font-family: var(--font-vf);
+  font-size: 16px;
   line-height: 16px;
   font-variation-settings: 'wght' 400;
   letter-spacing: 0;
@@ -481,6 +489,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-wrap: nowrap;
   align-items: center;
 }
+/* label/tag */
 .card-tag {
   background: var(--color-surface-emphasis);
   border-radius: var(--radius-tag);
@@ -491,7 +500,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-vf);
   font-size: 10px;
   line-height: 9px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 550;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   color: var(--color-text-default);
@@ -512,25 +521,33 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   text-align: center;
 }
+/* display/default */
 .value-headline {
-  font-size: 56px;
-  line-height: 60px;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--font-vf);
+  font-size: 64px;
+  line-height: 64px;
+  font-variation-settings: 'wght' 490;
   letter-spacing: -1px;
   color: var(--color-text-default);
-  max-width: 800px;
+  max-width: 900px;
 }
+/* subhead/sans/default */
 .value-body {
-  font-size: 18px;
-  line-height: 26px;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--font-vf);
+  font-size: 24px;
+  line-height: 29px;
+  font-variation-settings: 'wght' 550;
   letter-spacing: 0;
   color: var(--color-text-muted);
-  max-width: 640px;
+  opacity: 0.7;
+  max-width: 742px;
 }
+/* label/emphasis/default */
 .value-link {
+  font-family: var(--font-vf);
   font-size: 16px;
-  font-variation-settings: 'wght' 500;
+  line-height: 16px;
+  font-variation-settings: 'wght' 550;
   color: var(--color-text-default);
   text-decoration: underline;
   cursor: pointer;
@@ -551,17 +568,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-direction: column;
   gap: 12px;
 }
+/* display/small */
 .value-stat-number {
-  font-size: 56px;
-  line-height: 56px;
-  font-variation-settings: 'wght' 400;
-  letter-spacing: -1px;
+  font-family: var(--font-vf);
+  font-size: 48px;
+  line-height: 50px;
+  font-variation-settings: 'wght' 490;
+  letter-spacing: 0;
   color: var(--color-text-default);
 }
+/* typography/subhead/sans/small */
 .value-stat-text {
-  font-size: 16px;
-  line-height: 22px;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--font-vf);
+  font-size: 20px;
+  line-height: 24px;
+  font-variation-settings: 'wght' 550;
+  letter-spacing: -0.25px;
   color: var(--color-text-secondary);
   max-width: 220px;
 }
@@ -586,11 +608,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 16px;
   padding: 16px 0;
 }
+/* subhead/sans/small */
 .value-cta-text {
-  font-size: 18px;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--font-vf);
+  font-size: 20px;
+  line-height: 24px;
+  font-variation-settings: 'wght' 550;
+  letter-spacing: 0;
   color: var(--color-text-secondary);
 }
+/* label/small */
 .btn-cta {
   height: 40px;
   padding: 0 18px;
@@ -599,7 +626,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: var(--radius-pill);
   font-family: var(--font-vf);
   font-size: 14px;
-  font-variation-settings: 'wght' 500;
+  font-variation-settings: 'wght' 550;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -619,10 +646,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: sticky;
   top: 40px;
 }
+/* display/default */
 .faq-heading {
-  font-size: 56px;
-  line-height: 60px;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--font-vf);
+  font-size: 64px;
+  line-height: 64px;
+  font-variation-settings: 'wght' 490;
   letter-spacing: -1px;
   color: var(--color-text-default);
   position: relative;
@@ -655,10 +684,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 24px 0;
   gap: 16px;
 }
+/* subhead/sans/default */
 .faq-question-text {
-  font-size: 18px;
-  line-height: 24px;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--font-vf);
+  font-size: 24px;
+  line-height: 29px;
+  font-variation-settings: 'wght' 550;
   letter-spacing: 0;
   color: var(--color-text-default);
 }
@@ -676,7 +707,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   overflow: hidden;
   transition: max-height 0.35s var(--ease-in), padding 0.25s var(--ease-in);
 }
+/* label/default */
 .faq-answer-inner {
+  font-family: var(--font-vf);
   padding-bottom: 24px;
   font-size: 16px;
   line-height: 24px;
