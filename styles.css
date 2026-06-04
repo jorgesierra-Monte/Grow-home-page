@@ -155,8 +155,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: var(--sp-8) 0;
 }
 .nav-logo {
+  width: 63px;
   height: 32px;
-  width: auto;
+  transform: scaleY(-1);
 }
 .nav-tag {
   background: var(--color-accent-winnie);
