@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1600" />
+  <title>Grow Therapy — Mental health made easy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP for hero load animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- ── Safari Chrome ─────────────────────────────────────────────────── -->
+  <div class="safari-chrome">
+    <div class="safari-left-icons">
+      <!-- Back -->
+      <div class="safari-icon">
+        <svg viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 1L1 9L9 17" stroke="#333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <!-- Forward (dimmed) -->
+      <div class="safari-icon" style="opacity:0.25">
+        <svg viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L9 9L1 17" stroke="#333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <!-- Bookmarks -->
+      <div class="safari-icon">
+        <svg viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 1h12a2 2 0 0 1 2 2v17l-8-4-8 4V3a2 2 0 0 1 2-2z" stroke="#333" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Address bar -->
+    <div class="safari-address-bar">
+      <span style="font-size:13px;opacity:0.5;margin-right:4px">AA</span>
+      <span>growtherapy.com</span>
+      <div class="safari-lock">
+        <svg viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg" width="9" height="12">
+          <rect x="0.5" y="5" width="8" height="6.5" rx="1.2" stroke="#555" stroke-width="1.2"/>
+          <path d="M2.5 5V3.5a2 2 0 0 1 4 0V5" stroke="#555" stroke-width="1.2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="safari-right-icons">
+      <!-- Share -->
+      <div class="safari-icon">
+        <svg viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 1v14M3 7l6-6 6 6M1 17v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4" stroke="#333" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <!-- New tab -->
+      <div class="safari-icon">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="14" height="14" rx="2" stroke="#333" stroke-width="1.5"/>
+          <path d="M8 5v6M5 8h6" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <!-- Tabs overview -->
+      <div class="safari-icon">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="18" height="18" rx="3" stroke="#333" stroke-width="1.5"/>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="9" fill="#333" font-family="-apple-system">1</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Nav ───────────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-left">
+      <img class="nav-logo" src="assets/images/logo.svg" alt="Grow" />
+      <span class="nav-tag">We're hiring!</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-ghost">Log in</button>
+      <button class="btn btn-primary">Menu</button>
+    </div>
+  </nav>
+
+  <!-- ── Main content ───────────────────────────────────────────────────── -->
+  <div class="sections-container">
+
+    <!-- ── Hero ──────────────────────────────────────────────────────── -->
+    <section class="hero">
+
+      <!-- Hero images (8 scattered) -->
+      <!-- hi-1: small portrait top right -->
+      <div class="hero-image hi-1" data-depth="0.9">
+        <img src="assets/images/hero-1.jpg" alt="" />
+      </div>
+
+      <!-- hi-8: small portrait top left -->
+      <div class="hero-image hi-8" data-depth="0.7">
+        <img src="assets/images/hero-8.jpg" alt="" />
+      </div>
+
+      <!-- hi-2: wide landscape left mid -->
+      <div class="hero-image hi-2" data-depth="0.6">
+        <img src="assets/images/hero-2.jpg" alt="" />
+      </div>
+
+      <!-- hi-4: large center portrait (main, least movement) -->
+      <div class="hero-image hi-4" data-depth="0.25">
+        <img src="assets/images/hero-4.jpg" alt="" style="object-position: center 10%;" />
+      </div>
+
+      <!-- hi-5: tall portrait far right top -->
+      <div class="hero-image hi-5" data-depth="0.85">
+        <img src="assets/images/hero-5.jpg" alt="" />
+      </div>
+
+      <!-- hi-6: tall portrait right mid -->
+      <div class="hero-image hi-6" data-depth="0.7">
+        <img src="assets/images/hero-6.jpg" alt="" />
+      </div>
+
+      <!-- hi-3: tall portrait far left -->
+      <div class="hero-image hi-3" data-depth="0.8">
+        <img src="assets/images/hero-3.jpg" alt="" />
+      </div>
+
+      <!-- hi-7: small portrait lower right -->
+      <div class="hero-image hi-7" data-depth="1.0">
+        <img src="assets/images/hero-7.jpg" alt="" />
+      </div>
+
+      <!-- Text lockup -->
+      <div class="hero-lockup">
+        <h1 class="hero-headline">Mental health made easy</h1>
+
+        <div class="hero-filter-bar">
+          <button class="filter-pill">
+            Talk therapy
+            <span class="filter-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="filter-pill">
+            New York
+            <span class="filter-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="filter-pill">
+            Insurance*
+            <span class="filter-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="filter-pill">
+            Needs
+            <span class="filter-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+          <button class="btn-find">Find a provider</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Provider Carousel 1: Available within 5 days ──────────────── -->
+    <div class="carousel-section scroll-animate">
+      <div class="carousel-header">
+        <div class="carousel-title">
+          <h2>Available within 5 days</h2>
+          <span class="carousel-title-arrow">›</span>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn carousel-prev disabled" aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="carousel-btn carousel-next" aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track">
+
+          <!-- Card 1: Anita Rolins -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-1.jpg" alt="Anita Rolins" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Anita Rolins</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 1v3M9.5 1v3M1 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>Mon, Feb 21</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCSW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Anxiety Disorders</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Michelle Smith -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-2.jpg" alt="Michelle Smith" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Michelle Smith</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 1v3M9.5 1v3M1 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>Tue, Feb 22</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LFP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Child Psychology</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 3: David Davis -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-3.jpg" alt="David Davis" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">David Davis</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 1v3M9.5 1v3M1 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>Wed, Feb 23</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Family Therapy</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 4: David Wilson -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-4.jpg" alt="David Wilson" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">David Wilson</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 1v3M9.5 1v3M1 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>Thu, Feb 24</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCSW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Grief Counseling</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Emmanuelle Barnardiston -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-5.jpg" alt="Emmanuelle Barnardiston" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Emmanuelle Barnardiston</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 1v3M9.5 1v3M1 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>Mon, Feb 21</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCSW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Anxiety Disorders</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 6 (overflow, shows on scroll) -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-6.jpg" alt="Ann Joe" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Ann Joe</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><rect x="1" y="2.5" width="12" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 1v3M9.5 1v3M1 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>Fri, Feb 25</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Child Psychology</span>
+              <span class="card-tag">+ 2</span>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+      </div>
+    </div>
+
+    <!-- ── Provider Carousel 2: In-person near Brooklyn ───────────────── -->
+    <div class="carousel-section scroll-animate scroll-animate-delay-1">
+      <div class="carousel-header">
+        <div class="carousel-title">
+          <h2>In-person options near Brooklyn</h2>
+          <span class="carousel-title-arrow">›</span>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn carousel-prev disabled" aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="carousel-btn carousel-next" aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-track-wrapper">
+        <div class="carousel-track">
+
+          <!-- Card 1 -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-5.jpg" alt="Mike Smith" style="object-position: center 20%;" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Mike Smith</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7H7m0 0v-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>0.2 mi</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCSW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Anxiety Disorders</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-6.jpg" alt="Jenny Trost" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Jenny Trost</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7H7m0 0v-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>0.2 mi</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LFP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Child Psychology</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-7.jpg" alt="Oscar Alcínn" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Oscar Alcínn</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7H7m0 0v-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>0.2 mi</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Drug Counseling</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-8.jpg" alt="Ann Joe" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Ann Joe</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7H7m0 0v-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>0.2 mi</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Child Psychology</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-9.jpg" alt="Michelle Smith" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">Michelle Smith</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7H7m0 0v-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>0.2 mi</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCSW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Anxiety Disorders</span>
+              <span class="card-tag">+ 3</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="provider-card">
+            <div>
+              <div class="card-thumbnail">
+                <img src="assets/images/provider-10.jpg" alt="James Chen" />
+              </div>
+              <div class="card-meta">
+                <span class="card-name">James Chen</span>
+                <div class="card-info">
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7H7m0 0v-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>0.4 mi</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.436.59 3.44L7 8.885l-3.09 1.625.59-3.44L2 4.635l3.455-.505L7 1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="card-info-row">
+                    <svg class="card-icon" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 13c0-3.038 2.462-5.5 5.5-5.5s5.5 2.462 5.5 5.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    <span>LCSW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span class="card-tag">Family Therapy</span>
+              <span class="card-tag">+ 2</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Value Prop Section ─────────────────────────────────────────── -->
+    <section class="value-section">
+      <div class="value-top scroll-animate">
+        <h2 class="value-headline">The right therapist for you is already on Grow</h2>
+        <p class="value-body">Get therapy and medication support in one place—virtual or in-person. No switching apps, no repeating your story. Just care that fits your life.</p>
+        <a class="value-link">Learn more</a>
+      </div>
+
+      <div class="value-body-row scroll-animate scroll-animate-delay-1">
+        <div class="value-stat-block">
+          <div class="value-stat-number">+90%</div>
+          <div class="value-stat-text">of Grow Clients find a provider who meets all their needs</div>
+          <div style="display:flex;gap:6px;margin-top:8px">
+            <span style="width:8px;height:8px;background:var(--color-text-default);border-radius:50%;display:inline-block"></span>
+            <span style="width:8px;height:8px;background:var(--color-border-subtle);border-radius:50%;display:inline-block"></span>
+            <span style="width:8px;height:8px;background:var(--color-border-subtle);border-radius:50%;display:inline-block"></span>
+          </div>
+        </div>
+        <div class="value-images">
+          <img src="assets/images/value-1.jpg" alt="" />
+          <img src="assets/images/value-2.jpg" alt="" />
+          <img src="assets/images/hero-2.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="value-cta-row scroll-animate scroll-animate-delay-2">
+        <span class="value-cta-text">Average session cost $21 with insurance</span>
+        <button class="btn-cta">Get your estimate</button>
+      </div>
+    </section>
+
+    <!-- ── FAQ ────────────────────────────────────────────────────────── -->
+    <section class="faq-section scroll-animate">
+      <div class="faq-heading-block">
+        <h2 class="faq-heading">Frequently<br>asked<br>questions</h2>
+        <div class="faq-heading-images">
+          <img class="faq-inline-img" src="assets/images/faq-img-1.jpg" alt="" />
+          <img class="faq-inline-img" src="assets/images/faq-img-2.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="faq-items">
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span class="faq-question-text">Why filter by California rather than a city like LA?</span>
+            <span class="faq-chevron">
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p class="faq-answer-inner">Providers are licensed by state, not city. Filtering by state ensures you see every licensed provider who can legally treat you — whether they're based in LA, San Francisco, or anywhere in California.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question-text">Will providers take my insurance</span>
+            <span class="faq-chevron">
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p class="faq-answer-inner">Most of our providers accept major insurance plans. You can filter by your specific insurance in the search to only see providers who accept your plan.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question-text">Are there therapist who focus on specific issues?</span>
+            <span class="faq-chevron">
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p class="faq-answer-inner">Yes. Our providers specialize in everything from anxiety and depression to relationship issues, trauma, ADHD, and grief. Use the Needs filter to match with someone who has experience in what you're dealing with.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-question-text">What happens during the first therapy session?</span>
+            <span class="faq-chevron">
+              <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+                <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p class="faq-answer-inner">Your first session is typically an intake where you and your therapist get to know each other. You'll talk about what brought you to therapy, your goals, and how the therapist can help. It's low-pressure and conversational.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /sections-container -->
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-columns">
+      <div>
+        <div class="footer-col-heading">Resources</div>
+        <div class="footer-col-links">
+          <a class="footer-link">Mental health</a>
+          <a class="footer-link">Therapy 101</a>
+          <a class="footer-link">What to expect</a>
+          <a class="footer-link">Quizzes</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-heading">For Providers</div>
+        <div class="footer-col-links">
+          <a class="footer-link">Mental health providers</a>
+          <a class="footer-link">Prescribers</a>
+          <a class="footer-link">Refer a provider</a>
+          <a class="footer-link">Grow App resources</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-heading">Company</div>
+        <div class="footer-col-links">
+          <a class="footer-link">About us</a>
+          <a class="footer-link">Contact us</a>
+          <a class="footer-link highlight">Careers ✦</a>
+          <a class="footer-link">Partner with Grow</a>
+          <a class="footer-link">Blog</a>
+          <a class="footer-link">Get Mental</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-heading">Help &amp; Support</div>
+        <div class="footer-col-links">
+          <a class="footer-link">Client help center</a>
+          <a class="footer-link">Provider help center</a>
+          <a class="footer-link">Resources</a>
+          <a class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <div class="footer-search-row">
+        <div class="footer-search">
+          <span class="footer-search-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M9.5 9.5L13 13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <input type="text" placeholder="Enter zip code" />
+        </div>
+        <button class="btn-footer-cta">Find a therapist</button>
+      </div>
+
+      <img class="footer-wordmark" src="assets/images/wordmark.svg" alt="GROW" />
+
+      <div class="footer-social">
+        <!-- X/Twitter -->
+        <a href="#" aria-label="X">
+          <svg width="18" height="16" viewBox="0 0 18 16" fill="currentColor">
+            <path d="M0.063 0h3.396l4.61 6.337L13.16 0H17l-6.21 7.38L17.936 16H14.5l-4.912-6.701L3.87 16H0l6.54-7.77L0.063 0z"/>
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg>
+        </a>
+        <!-- TikTok -->
+        <a href="#" aria-label="TikTok">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor">
+            <path d="M9.25 0c.19 1.98 1.26 3.17 3.25 3.3v2.21c-1.12.11-2.1-.26-3.25-.95v4.21c0 5.35-5.83 7.02-8.17 3.18-1.5-2.43-.58-6.7 4.17-6.88v2.32c-.38.06-.78.15-1.12.27-1.07.38-1.68 1.1-1.51 2.3.33 2.3 3.41 2.98 3.14-.4V0h3.49z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Legal bar -->
+    <div class="footer-legal">
+      <div class="footer-legal-left">
+        <p>© 2024 Grow Therapy, Inc. All rights reserved.</p>
+        <p>If you or someone you know is experiencing an emergency or crisis, call 988 the Suicide &amp; Crisis Lifeline or go to the nearest emergency room.</p>
+      </div>
+      <div class="footer-legal-links">
+        <a class="footer-legal-link">Terms of service</a>
+        <a class="footer-legal-link">Privacy Policy</a>
+        <a class="footer-legal-link">Accessibility</a>
+        <a class="footer-legal-link">Do Not Sell My Info</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-wrapper -->
+
+<script src="animations.js"></script>
+</body>
+</html>
